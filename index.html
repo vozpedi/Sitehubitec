@@ -142,6 +142,147 @@ footer .btn{margin-top:20px;max-width:360px}
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
   WhatsApp
 </a>
+<!-- PRÉVIA EM PAUSA -->
+<div id="approval-overlay">
+  <style>
+    #approval-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2147483647;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(18, 16, 16, 0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
 
+    #approval-overlay .approval-card {
+      width: min(460px, 100%);
+      padding: 38px 30px 34px;
+      background: #fff;
+      border-radius: 26px;
+      text-align: center;
+      box-shadow: 0 25px 80px rgba(0,0,0,.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #approval-overlay .approval-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #E8313A, #FFCC2A);
+    }
+
+    #approval-overlay .approval-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #FFF3D1;
+      font-size: 31px;
+    }
+
+    #approval-overlay .eyebrow {
+      margin-bottom: 8px;
+      color: #D1232C;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    #approval-overlay h2 {
+      margin: 0 0 12px;
+      color: #1C1A1A;
+      font-size: 25px;
+      line-height: 1.2;
+      font-weight: 850;
+    }
+
+    #approval-overlay p {
+      margin: 0;
+      color: #5B5656;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    #approval-overlay .highlight {
+      display: block;
+      margin-top: 13px;
+      color: #1C1A1A;
+      font-weight: 700;
+    }
+
+    #approval-overlay .signature {
+      margin-top: 22px;
+      color: #A81B23;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #approval-overlay .dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 20px;
+    }
+
+    #approval-overlay .dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #E8313A;
+      opacity: .35;
+    }
+
+    #approval-overlay .dots span:nth-child(2) {
+      opacity: .65;
+    }
+
+    #approval-overlay .dots span:nth-child(3) {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="approval-card">
+
+    <div class="approval-icon">👀</div>
+
+    <div class="eyebrow">Prévia reservada</div>
+
+    <h2>Tem algo bonito esperando por você.</h2>
+
+    <p>
+      A página já está pronta para ser vista,
+      mas deixamos essa prévia em pausa por enquanto.
+    </p>
+
+    <span class="highlight">
+      Falta só um detalhe: o seu “ok”. ✨
+    </span>
+
+    <div class="signature">
+      Assim que aprovado, ela ganha vida.
+    </div>
+
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</div>
+<!-- FIM DA PRÉVIA -->
 </body>
 </html>
